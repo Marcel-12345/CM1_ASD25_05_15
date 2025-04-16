@@ -18,12 +18,6 @@ public class Transaksi {
     }
 
     void tampilDataTransaksi(){
-        System.out.println("Kode Transaksi     : " + kodeTransaksi);
-        System.out.println("Saldo              : " + saldo);
-        System.out.println("In/Out Saldo       : " + inOutSaldo);
-        System.out.println("Final Saldo        : " + finalSaldo);
-        System.out.println("Tanggal Transaksi  : " + tanggalTransaksi);
-        System.out.println("Tipe Transaksi     : " + type);
-        System.out.println("Bank Account       : " + bankAcc);
+        System.out.println(kodeTransaksi + "\t\t" + saldo + "\t" + inOutSaldo + "\t" + finalSaldo + "\t" + tanggalTransaksi + "\t\t" + type + "\t" + bankAcc);
     }
 }

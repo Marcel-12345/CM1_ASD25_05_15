@@ -17,9 +17,9 @@ public class Main {
         data.tambah(new Transaksi("Tr002", 200000, 100000, 600000, "23-04-2024", "Kredit", daftarBank[1]));
         data.tambah(new Transaksi("Tr001", 300000, 100000, 400000, "23-04-2024", "Debit", daftarBank[0]));
 
-        int pilih;
+        int pilih = 0;
 
-        while (true) {
+        while (pilih != 6) {
             System.out.println("===================== POLINEMA BANK ====================");
             System.out.println("BANK MENU: ");
             System.out.println("1. Data Norek");
@@ -34,12 +34,13 @@ public class Main {
 
             switch (pilih) {
                 case 1:
+                System.out.println("Nama\t\tNama Ibu\tNo. HP\t\t\tEmail");
                     for (Bank b : daftarBank) {
                         b.tampilDataNorek();
-                        System.out.println();
                     }
                     break;
                 case 2:
+                System.out.println("Kode Transaksi\tSaldo\t\tDebit/Kredit\tFinal Saldo\tTanggal Transaksi\tType\tBank Account");
                     data.displayData();
                     break;
                 case 3:
@@ -54,11 +55,13 @@ public class Main {
                     data.Sorting();
                     break;
                 case 6:
-                    System.out.println("Keluar.");
-                    return;
+                    System.out.println("Terima kasih!");
+                    break;
                 default:
+                    System.out.println("Input tidak valid, masukkan ulang!");
                     break;
             }
         }
+        sc.close();
     }
 }

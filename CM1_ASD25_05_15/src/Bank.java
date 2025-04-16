@@ -15,6 +15,6 @@ public class Bank{
     }
 
     void tampilDataNorek(){
-        System.out.println(nama + "\t" + namaIbu + "\t" + noHp + "\t" + email);
+        System.out.println(nama + "\t\t" + namaIbu + "\t\t" + noHp + "\t" + email);
     }
 }
