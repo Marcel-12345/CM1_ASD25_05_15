@@ -1,5 +1,3 @@
-
-
 public class Bank{
     String noRekening;
     String nama;
@@ -8,6 +6,7 @@ public class Bank{
     String email;
 
     Bank(String noRekening, String nama, String namaIbu, String noHp, String email){
+        this.noRekening = noRekening;
         this.nama = nama;
         this.namaIbu = namaIbu;
         this.noHp = noHp;
@@ -15,6 +14,6 @@ public class Bank{
     }
 
     void tampilDataNorek(){
-        System.out.println(nama + "\t" + namaIbu + "\t" + noHp + "\t" + email);
+        System.out.println(noRekening + "\t" + nama + "\t\t" + namaIbu + "\t\t" + noHp + "\t" + email);
     }
 }

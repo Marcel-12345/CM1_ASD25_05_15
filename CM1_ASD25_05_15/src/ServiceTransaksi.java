@@ -19,7 +19,6 @@ public class ServiceTransaksi {
     public void displayData() {
         for (int i = 0; i < index; i++) {
             Trans[i].tampilDataTransaksi();
-            System.out.println("--------------------");
         }
     }
 
@@ -27,7 +26,7 @@ public class ServiceTransaksi {
         boolean temukan = false;
         for (Transaksi t : Trans) {
             if (t != null && t.bankAcc.email.equalsIgnoreCase(email)) {
-                t.tampilDataTransaksi();
+                t.tampilTransaksi();
                 temukan = true;
             }
         }
@@ -50,7 +49,7 @@ public class ServiceTransaksi {
         }
 
         System.out.println("Menampilkan Transaksi dengan Debit/Kredit Tertinggi:");
-        max.tampilDataTransaksi();
+        max.tampilTransaksi();
     }
 
     void Sorting() {
@@ -65,6 +64,7 @@ public class ServiceTransaksi {
         }
 
         System.out.println("Transaksi diurutkan berdasarkan Debit/Kredit ASC:");
+        System.out.println("Kode Transaksi\tNo Rekening\tSaldo\t\tDebit/Kredit\tFinal Saldo\tTanggal Transaksi\tType");
         displayData();
     }
 }

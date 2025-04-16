@@ -11,16 +11,16 @@ public class Main {
         daftarBank[4] = new Bank("16101617 2416", "Gery", "Fatimah", "083-683-416-8323", "gery@gery.com");
 
         ServiceTransaksi data = new ServiceTransaksi(5);
-        data.tambah(new Transaksi("Tr005", 500000, 200000, 700000, "23-04-2024", "Kredit", daftarBank[4]));
-        data.tambah(new Transaksi("Tr004", 450000, 150000, 650000, "23-04-2024", "Kredit", daftarBank[3]));
-        data.tambah(new Transaksi("Tr003", 350000, 300000, 200000, "23-04-2024", "Debit", daftarBank[2]));
-        data.tambah(new Transaksi("Tr002", 200000, 100000, 600000, "23-04-2024", "Kredit", daftarBank[1]));
-        data.tambah(new Transaksi("Tr001", 300000, 100000, 400000, "23-04-2024", "Debit", daftarBank[0]));
+        data.tambah(new Transaksi("Tr005", 500000, 200000, 700000, "23-04-2024", "Kredit", daftarBank[0]));
+        data.tambah(new Transaksi("Tr004", 450000, 150000, 600000, "23-04-2024", "Kredit", daftarBank[1]));
+        data.tambah(new Transaksi("Tr003", 750000, 300000, 450000, "23-04-2024", "Debit", daftarBank[2]));
+        data.tambah(new Transaksi("Tr002", 200000, 100000, 300000, "23-04-2024", "Kredit", daftarBank[3]));
+        data.tambah(new Transaksi("Tr001", 300000, 100000, 200000, "23-04-2024", "Debit", daftarBank[4]));
 
-        int pilih;
+        int pilih = 0;
 
-        while (true) {
-            System.out.println("===================== POLINEMA BANK ====================");
+        while (pilih != 6) {
+            System.out.println("\n===================== POLINEMA BANK ====================");
             System.out.println("BANK MENU: ");
             System.out.println("1. Data Norek");
             System.out.println("2. Data Transaksi");
@@ -34,12 +34,13 @@ public class Main {
 
             switch (pilih) {
                 case 1:
+                System.out.println("No Rekening\tNama\t\tNama Ibu\tNo. HP\t\t\tEmail");
                     for (Bank b : daftarBank) {
                         b.tampilDataNorek();
-                        System.out.println();
                     }
                     break;
                 case 2:
+                System.out.println("Kode Transaksi\tNo Rekening\tSaldo\t\tDebit/Kredit\tFinal Saldo\tTanggal Transaksi\tType");
                     data.displayData();
                     break;
                 case 3:
@@ -54,11 +55,13 @@ public class Main {
                     data.Sorting();
                     break;
                 case 6:
-                    System.out.println("Keluar.");
-                    return;
+                    System.out.println("Terima kasih!");
+                    break;
                 default:
+                    System.out.println("Input tidak valid, masukkan ulang!");
                     break;
             }
         }
+        sc.close();
     }
 }
