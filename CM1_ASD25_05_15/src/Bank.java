@@ -1,4 +1,4 @@
-package CM1_ASD25_05_15;
+
 
 public class Bank{
     String noRekening;
